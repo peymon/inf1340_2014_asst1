@@ -41,17 +41,6 @@ def grade_to_gpa(grade):
     """
 
 
-
-    '''letter_gpa_list = {'A+': 4.0,
-                       'A': 4.0,
-                       'A-': 3.7,
-                       'B+': 3.3,
-                       'B': 3.0,
-                       'B-': 2.7,
-                       'FZ': 0
-                        }'''
-
-
     letter_grade = {'A+': 4.0,
                     'A': 4.0,
                     'A-': 3.7,
@@ -62,22 +51,21 @@ def grade_to_gpa(grade):
                     }
 
     gpa = 0.0
-
     if type(grade) is str:
-        if letter_grade == "A+":
-            gpa = letter_grade["A+"]
-        elif letter_grade == "A":
-            gpa = 4.0
-        elif letter_grade == "A-":
-            gpa = 3.7
-        elif letter_grade == "B+":
-            gpa = 3.3
-        elif letter_grade == "B":
-            gpa = 3.0
-        elif letter_grade == "B-":
-            gpa = 2.7
-        elif letter_grade == "FZ":
-            gpa = 0.0
+        if grade == "A+":
+            gpa = letter_grade['A+']
+        elif grade == "A":
+            gpa = letter_grade['A+']
+        elif grade == "A-":
+            gpa = letter_grade['A-']
+        elif grade == "B+":
+            gpa = letter_grade['B+']
+        elif grade == "B":
+            gpa = letter_grade['B']
+        elif grade == "B-":
+            gpa = letter_grade['B-']
+        elif grade == "FZ":
+            gpa = letter_grade['FZ']
         else:
             print("Wrong input, try again")
         return gpa
@@ -117,23 +105,4 @@ def grade_to_gpa(grade):
 
   # write a long if-statement to convert letter_grade
    # assign the value to gpa
-'''if letter_grade == "A+":
-        gpa = 4.0
-    elif letter_grade == "A":
-        gpa = 4.0
-    elif letter_grade == "A-":
-        gpa = 3.7
-    elif letter_grade == "B+":
-        gpa = 3.3
-    elif letter_grade == "B":
-        gpa = 3.0
-    elif letter_grade == "B-":
-        gpa = 2.7
-    elif letter_grade == "FZ":
-        gpa = 0.0
-    else:
-        print("Wrong input, try again")
-    return gpa
-'''
-
-print (grade_to_gpa(98))
+print (grade_to_gpa(80))
