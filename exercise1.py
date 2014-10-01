@@ -40,15 +40,73 @@ def grade_to_gpa(grade):
         ValueError if parameter is out of range
     """
 
-    letter_grade = ""
+
+
+    '''letter_gpa_list = {'A+': 4.0,
+                       'A': 4.0,
+                       'A-': 3.7,
+                       'B+': 3.3,
+                       'B': 3.0,
+                       'B-': 2.7,
+                       'FZ': 0
+                        }'''
+
+
+    letter_grade = {'A+': 4.0,
+                    'A': 4.0,
+                    'A-': 3.7,
+                    'B+': 3.3,
+                    'B': 3.0,
+                    'B-': 2.7,
+                    'FZ': 0
+                    }
+
     gpa = 0.0
 
     if type(grade) is str:
-        print ("letter") # remove this line once the code is implemented
+        if letter_grade == "A+":
+            gpa = letter_grade["A+"]
+        elif letter_grade == "A":
+            gpa = 4.0
+        elif letter_grade == "A-":
+            gpa = 3.7
+        elif letter_grade == "B+":
+            gpa = 3.3
+        elif letter_grade == "B":
+            gpa = 3.0
+        elif letter_grade == "B-":
+            gpa = 2.7
+        elif letter_grade == "FZ":
+            gpa = 0.0
+        else:
+            print("Wrong input, try again")
+        return gpa
+        # remove this line once the code is implemented
         # check that the grade is one of the accepted values
         # assign grade to letter_grade
     elif type(grade) is int:
-        print("mark") # remove this line once the code is implemented
+        # print("mark")
+        if  85 <= grade <= 100:
+            #print ("Your GPA is 4.0")
+            gpa = 4.0
+        elif 80 <= grade <= 84:
+            #print ("Your GPA is 3.7")
+            gpa = 3.7
+        elif 77 <= grade <= 79:
+            gpa = 3.3 # assigns value to gpa. Could also be print ("Your GPA is 3.3")
+        elif 73 <= grade <= 76:
+            #print ("Your GPA is 3.0")
+            gpa = 3.0
+        elif 70 <= grade <= 72:
+            #print ("Your GPA is 2.7")
+            gpa = 2.7
+        elif 0 <= grade <= 69:
+            #print ("Your GPA is 0")
+            gpa = 0
+        else:
+            print ("Please make sure your input is between 0 - 100%")
+        return gpa
+        # remove this line once the code is implemented
         # check that grade is in the accepted range
         # convert the numeric grade to a letter grade
         # assign the value to letter_grade
@@ -57,10 +115,25 @@ def grade_to_gpa(grade):
         # raise a TypeError exception
         raise TypeError("Invalid type passed as parameter")
 
-    # write a long if-statement to convert letter_grade
-    # assign the value to gpa
-    if letter_grade == "A":
+  # write a long if-statement to convert letter_grade
+   # assign the value to gpa
+'''if letter_grade == "A+":
         gpa = 4.0
-
+    elif letter_grade == "A":
+        gpa = 4.0
+    elif letter_grade == "A-":
+        gpa = 3.7
+    elif letter_grade == "B+":
+        gpa = 3.3
+    elif letter_grade == "B":
+        gpa = 3.0
+    elif letter_grade == "B-":
+        gpa = 2.7
+    elif letter_grade == "FZ":
+        gpa = 0.0
+    else:
+        print("Wrong input, try again")
     return gpa
+'''
 
+print (grade_to_gpa(98))
