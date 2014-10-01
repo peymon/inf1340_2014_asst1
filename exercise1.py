@@ -67,7 +67,7 @@ def grade_to_gpa(grade):
         elif grade == "FZ":
             gpa = letter_grade['FZ']
         else:
-            print("Wrong input, try again")
+            raise ValueError("Wrong input, try again")
         return gpa
         # remove this line once the code is implemented
         # check that the grade is one of the accepted values
@@ -92,7 +92,7 @@ def grade_to_gpa(grade):
             #print ("Your GPA is 0")
             gpa = 0
         else:
-            print ("Please make sure your input is between 0 - 100%")
+            raise ValueError ("Please make sure your input is between 0 - 100%")
         return gpa
         # remove this line once the code is implemented
         # check that grade is in the accepted range
