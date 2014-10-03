@@ -11,8 +11,8 @@ Example:
 
 """
 
-__author__ = 'Susan Sim'
-__email__ = "ses@drsusansim.org"
+__author__ = 'Peymon & Haoran'
+__email__ = ""
 
 __copyright__ = "2014 Susan Sim"
 __license__ = "MIT License"
@@ -105,4 +105,4 @@ def grade_to_gpa(grade):
 
   # write a long if-statement to convert letter_grade
    # assign the value to gpa
-#print (grade_to_gpa(80))
+#print (grade_to_gpa(101))
