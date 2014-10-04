@@ -12,9 +12,9 @@ Example:
 """
 
 __author__ = 'Peymon & Haoran'
-__email__ = ""
+__email__ = "Payran@payran.com"
 
-__copyright__ = "2014 Susan Sim"
+__copyright__ = "2014 PayRan"
 __license__ = "MIT License"
 
 __status__ = "Prototype"
@@ -49,44 +49,47 @@ def grade_to_gpa(grade):
                     'B-': 2.7,
                     'FZ': 0
                     }
-
+    # initial value of gpa
     gpa = 0.0
+
+    # input grade value must be string or integer, otherwise raise TypeError
+
+    #if grade input is a string and its value corresponds with any of letter_grade dictionary keys,
+    #return the corresponding key value. For ex. if grade input is "A+" return 4.0
     if type(grade) is str:
         if grade in letter_grade.keys():
             return letter_grade[grade]
-
+        #if input is not one of the keys in letter_grade, raise ValueError
         else:
             raise ValueError("Wrong input, try again")
-        #return gpa
-        # check that the grade is one of the accepted values
-        # assign grade to letter_grade
+    # if grade input is integer it must be between 0-100, otherwise raise ValueError
+    # assign value to gpa according to where grade falls between 0-100
     elif type(grade) is int:
-        # print("mark")
-        if  85 <= grade <= 100:
-            #print ("Your GPA is 4.0")
+
+        if 85 <= grade <= 100:
+            #assign value to gpa.
             gpa = 4.0
         elif 80 <= grade <= 84:
-            #print ("Your GPA is 3.7")
+            #assign value to gpa.
             gpa = 3.7
         elif 77 <= grade <= 79:
-            gpa = 3.3 # assigns value to gpa. Could also be print ("Your GPA is 3.3")
+            #assign value to gpa.
+            gpa = 3.3
         elif 73 <= grade <= 76:
-            #print ("Your GPA is 3.0")
+            #assign value to gpa.
             gpa = 3.0
         elif 70 <= grade <= 72:
-            #print ("Your GPA is 2.7")
+            #assign value to gpa.
             gpa = 2.7
         elif 0 <= grade <= 69:
-            #print ("Your GPA is 0")
+            #assign value to gpa.
             gpa = 0
         else:
-            raise ValueError ("Please make sure your input is between 0 - 100%")
+            raise ValueError("Please make sure your input is between 0 - 100%")
+        # return gpa
         return gpa
-        # remove this line once the code is implemented
-        # check that grade is in the accepted range
-        # convert the numeric grade to a letter grade
-        # assign the value to letter_grade
-        # hint: letter_grade = mark_to_letter(grade)
+
+    # if grade input is not string or integer raise an error
     else:
         # raise a TypeError exception
         raise TypeError("Invalid type passed as parameter")
