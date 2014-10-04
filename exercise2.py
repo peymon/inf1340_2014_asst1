@@ -31,18 +31,25 @@ def checksum (upc):
     """
 
     # check type of input
+    if type(upc) is not str:
     # raise TypeError if not string
-
+        raise TypeError("Wrong input, try again")
     # check length of string
+    elif len(upc) != 12:
     # raise ValueError if not 12
-
+        raise ValueError("Wrong input, try again")
     # convert string to array
     # hint: use the list function
-
+    else:
+        num=list(upc)[0:11]
     # generate checksum using the first 11 digits provided
+        odd =sum(int(x) for x in num[::2])
+        even = sum(int(x) for x in num[1::2])
+        Sum = odd*3+even
+        X = 10 - Sum%10
     # check against the the twelfth digit
-
+        if X == int(list(upc)[11]):
     # return True if they are equal, False otherwise
-
-    return False
+            return True
+        return False
 
