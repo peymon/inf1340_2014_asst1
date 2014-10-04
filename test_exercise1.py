@@ -83,3 +83,6 @@ def test_float_input():
         grade_to_gpa(82.5)
 
 # add functions for any other tests
+def test_letter_input():
+    with pytest.raises(ValueError):
+        grade_to_gpa("a+")

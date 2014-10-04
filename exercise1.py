@@ -58,7 +58,6 @@ def grade_to_gpa(grade):
         else:
             raise ValueError("Wrong input, try again")
         #return gpa
-        # remove this line once the code is implemented
         # check that the grade is one of the accepted values
         # assign grade to letter_grade
     elif type(grade) is int:

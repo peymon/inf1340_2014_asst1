@@ -12,4 +12,17 @@ def test_checksum():
     assert decide_rps("Scissors", "Scissors") == 0
     assert decide_rps("Rock", "Scissors") == 1
     # other tests
+    assert decide_rps("Paper", "Rock") == 1
+    assert decide_rps("Paper", "Paper") == 0
 
+def test_input():
+    """
+    Inputs that are the incorrect format and length
+    """
+    with pytest.raises(TypeError):
+        decide_rps(23,34)
+        decide_rps([2],[56])
+
+    with pytest.raises(ValueError):
+        decide_rps("paper","rocks")
+        decide_rps("rock","papers")

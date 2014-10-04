@@ -25,7 +25,7 @@ def test_checksum():
     assert checksum("085392132225") is True
     assert checksum("717951000841") is False
     # other tests
-
+    assert checksum("982437435435") is False
 
 def test_input():
     """
@@ -40,5 +40,7 @@ def test_input():
         checksum("1234567890")
 
     # other tests
-
+        checksum("12343453389X")
 # add functions for any other tests
+def test_zero():
+    assert checksum("000000000000") is False
