@@ -40,7 +40,6 @@ def grade_to_gpa(grade):
         ValueError if parameter is out of range
     """
 
-
     letter_grade = {'A+': 4.0,
                     'A': 4.0,
                     'A-': 3.7,
@@ -48,13 +47,13 @@ def grade_to_gpa(grade):
                     'B': 3.0,
                     'B-': 2.7,
                     'FZ': 0
-                    }
+    }
     # initial value of gpa
     gpa = 0.0
 
     # input grade value must be string or integer, otherwise raise TypeError
 
-    #if grade input is a string and its value corresponds with any of letter_grade dictionary keys,
+    # if grade input is a string and its value corresponds with any of letter_grade dictionary keys,
     #return the corresponding key value. For ex. if grade input is "A+" return 4.0
     if type(grade) is str:
         if grade in letter_grade.keys():

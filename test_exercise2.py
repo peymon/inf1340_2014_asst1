@@ -2,15 +2,13 @@
 
 """ Module to test exercise2.py """
 
-__author__ = 'Susan Sim'
-__email__ = "ses@drsusansim.org"
+__author__ = 'Peymon & Haoran'
+__email__ = "Payran@payran.com"
 
-__copyright__ = "2014 Susan Sim"
+__copyright__ = "2014 PayRan"
 __license__ = "MIT License"
 
 __status__ = "Prototype"
-
-# imports one per line
 
 # imports one per line
 import pytest
@@ -27,6 +25,7 @@ def test_checksum():
     # other tests
     assert checksum("982437435435") is False
 
+
 def test_input():
     """
     Inputs that are the incorrect format and length
@@ -39,8 +38,10 @@ def test_input():
         checksum("1")
         checksum("1234567890")
 
-    # other tests
+        # other tests
         checksum("12343453389X")
+
+
 # add functions for any other tests
 def test_zero():
     assert checksum("000000000000") is False
