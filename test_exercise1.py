@@ -94,3 +94,7 @@ def test_letter_input():
     """
     with pytest.raises(ValueError):
         grade_to_gpa("a+")
+
+    with pytest.raises(ValueError):
+        grade_to_gpa("v")
+
