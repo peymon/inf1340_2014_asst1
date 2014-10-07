@@ -6,7 +6,7 @@
     Assignment 1, Exercise 2, INF1340 Fall 2014
 """
 
-__author__ = 'Peymon & Haoran'
+__author__ = "Peymon & Haoran"
 __email__ = "Payran@payran.com"
 
 __copyright__ = "2014 PeyRan"

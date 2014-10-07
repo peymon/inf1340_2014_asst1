@@ -2,7 +2,7 @@
 
 """ Module to test exercise3.py """
 
-__author__ = 'Peymon & Haoran'
+__author__ = "Peymon & Haoran"
 __email__ = "Payran@payran.com"
 
 __copyright__ = "2014 PayRan"
